@@ -1,0 +1,320 @@
+
+*{
+    box-sizing: border-box;
+   
+}
+.containe {
+    width: 100%;  /* Make sure the container takes full width */
+    text-align: right;  /* Align the content to the right */
+  }
+
+  
+  
+  .box {
+    /* margin-right: 50px; */
+    display: inline-flex;
+    align-items: center;
+    background-color: rgb(86, 83, 83);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .box:hover {
+    background-color: #0056b3;
+  }
+  
+  .box svg {
+    margin-left: 10px;
+  }
+  
+
+/* Shop Section */
+.section.shop {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.shop .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+/* Slider Container */
+.has-scrollbar {
+    display: flex;
+    gap: 15px;
+    padding-block-end: 15px;
+    margin-block-end: -15px;
+    animation: autoScroll 10s linear infinite; /* Automatic scrolling */
+}
+
+/* Scrollbar Item */
+.scrollbar-item {
+    min-width: 400px;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for individual items */
+}
+
+/* Parent container with horizontal scroll, without visible scrollbar */
+.has-scrollbarr {
+    display: flex;
+    overflow-x: auto; /* Enable scrolling */
+    scrollbar-width: none; /* For Firefox: Hide the scrollbar */
+    -ms-overflow-style: none;  /* For Internet Explorer 10+ */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    gap: 16px; /* Adds spacing between items */
+    padding: 10px; /* Optional padding */
+    width: 100%;
+  }
+  
+  /* For webkit browsers like Chrome, Edge, Safari */
+  .has-scrollbarr::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  /* Individual scrollable item styling */
+  .scrollbar-itemr {
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    cursor: pointer; /* Makes the items clickable */
+    transition: transform 0.3s ease; /* Adds a hover effect */
+    width: 300px; /* Fixed width for items */
+  }
+  
+  .scrollbar-itemr:hover {
+    transform: translateY(-5px); /* Hover effect for lift */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Optional shadow */
+  }
+  
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    .scrollbar-itemr {
+      width: 250px; /* Adjust item width for smaller screens */
+    }
+  }
+  
+/* Shop Card */
+.shop-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    
+}
+
+.card-banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    
+}
+
+.img-cover {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+}
+
+.card-banner:hover .img-cover {
+    opacity: 0.7; /* Fade image on hover */
+}
+
+/* Position action icons vertically on the right */
+.card-actions {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Place on the right side */
+    transform: translateY(-50%); /* Center vertically */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    gap: 10px; /* Space between icons */
+    opacity: 0; /* Hide icons by default */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.card-banner:hover .card-actions {
+    opacity: 1; /* Show icons on hover */
+}
+
+.action-btn {
+    border: none;
+    padding: 8px; /* Reduced padding */
+    border-radius: 50%;
+    background-color: #040404;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.action-btn:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.card-content {
+    /* padding: 15px;  */
+}
+
+.price .span {
+    font-weight: bold;
+    color: black;
+}
+
+.card-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px; /* Decreased margin */
+}
+
+.card-rating .rating-wrapper ion-icon {
+    font-size: 14px; /* Decreased icon size */
+}
+
+/* Scroll Animation */
+@keyframes autoScroll {
+    0% {
+        transform: translateX(0); /* Start at the leftmost position */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the leftmost end */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .has-scrollbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .scrollbar-item {
+        min-width: 100%;
+    }
+
+    .section-title {
+        font-size: 24px; /* Decreased font size */
+    }
+
+    .btn-link {
+        font-size: 12px; /* Decreased font size */
+    }
+}
+/* Feature Section Styles */
+.section.feature {
+    padding: 60px 20px;
+    background-color: white; /* Set background to white */
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  /* Container to center content */
+  .containere {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Feature List (Flex Container) */
+  .flex-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure the items wrap on smaller screens */
+    gap: 20px; /* Adds spacing between the items */
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+  
+  /* Individual Feature Item (Flex Items) */
+  .flex-item {
+    flex: 1 1 calc(33.333% - 20px); /* Each item takes up 1/3 of the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff; /* Ensure each card has a white background */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Add space between rows */
+  }
+  
+  .flex-item:hover {
+    /* transform: translateY(-5px);  */
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  */
+  }
+  
+  /* Feature Card Image */
+  .card-icon {
+    width: 100%;
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 204px; /* Set a maximum width to prevent large images */
+    /* margin-bottom: 20px;  */
+  }
+  
+  /* Card Title Styling */
+  .card-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Card Text Styling */
+  .card-text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 768px) {
+    .flex-item {
+      flex: 1 1 100%; /* Stack the feature cards vertically */
+    }
+  
+    .section-title {
+      font-size: 24px;
+    }
+  
+    .card-title {
+      font-size: 20px;
+    }
+  
+    .card-text {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 20px;
+    }
+  
+    .card-title {
+      font-size: 18px;
+    }
+  
+    .card-text {
+      font-size: 12px;
+    }
+  }
+  

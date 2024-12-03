@@ -1,0 +1,240 @@
+offer section */
+.section.offer {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  animation: fadeIn 1.5s ease-in-out; /* Section fade-in animation */
+}
+
+/* Container styling */
+.offer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between the sections */
+  animation: slideUp 1.2s ease-in-out; /* Slide-up animation for the container */
+  flex-wrap: nowrap; /* Ensure the items stay in one line */
+}
+
+/* Styling for each image item */
+.image-container {
+  display: flex; /* Use flex for horizontal alignment */
+  gap: 20px; /* Space between images */
+  align-items: center; /* Center images vertically if necessary */
+  padding: 20px;
+  flex: 1; /* Ensure it takes up available space */
+}
+
+/* Styling for each image item */
+.image-item {
+  position: relative; /* For positioning elements like captions or badges */
+}
+
+.offer-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Image-specific styles */
+.image-left .offer-image {
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  height: 300px; /* Fixed height for the left image */
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+.image-right .offer-image {
+  object-fit: cover;
+  height: 500px; /* Fixed height for the right image */
+  animation: zoomIn 1.5s ease-in-out;
+}
+
+/* Hover effect for images */
+.image-item:hover .offer-image {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Styling for the content container */
+.offer-content {
+  text-align: left;
+  padding: 20px;
+  animation: slideLeft 1.5s ease-in-out; /* Slide-in from left animation */
+  max-width: 600px; /* Restrict the width for readability */
+  flex: 1; /* Ensure the content takes available space */
+}
+
+/* Subtitle styling */
+.offer-subtitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+  animation: fadeIn 1.2s ease-in-out; /* Fade-in animation */
+}
+
+.offer-subtitle .span {
+  font-weight: bold;
+  color: #222;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgb(66, 107, 86);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-left: 10px;
+  animation: pulse 2s infinite; /* Pulsing animation for the badge */
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #333;
+  animation: slideRight 1.5s ease-in-out; /* Slide-in from right animation */
+}
+
+/* Countdown timer styling */
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  margin: 20px 0;
+  animation: fadeInScale 1.2s ease-in-out; /* Fade-in with scaling effect */
+}
+
+.countdown .time {
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: rgb(48, 111, 79);
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px; /* Reduced font size */
+  font-weight: bold;
+  padding: 8px 16px; /* Reduced padding */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.btn-primary {
+  background-color: black;
+  color: #fff;
+  border-radius: 10px;
+  width: 150px; /* Set a fixed width */
+  height: 40px; /* Adjust height for better proportion */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .offer-container {
+    flex-direction: column; /* Stack the content vertically on smaller screens */
+  }
+
+  .image-container {
+    flex-direction: column; /* Stack the images vertically on smaller screens */
+  }
+
+  .image-left .offer-image,
+  .image-right .offer-image {
+    height: 250px; /* Adjust image height on mobile */
+  }
+}
