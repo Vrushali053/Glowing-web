@@ -76,12 +76,23 @@ function Offer() {
             </p>
 
             {/* Countdown Display */}
-            <div className="countdown">
+            {/* <div className="countdown">
               <span className="time" aria-label="days">{timeLeft.days}</span>
               <span className="time" aria-label="hours">{timeLeft.hours}</span>
               <span className="time" aria-label="minutes">{timeLeft.minutes}</span>
               <span className="time" aria-label="seconds">{timeLeft.seconds}</span>
-            </div>
+            </div> */}
+
+<div className="countdown">
+  <span className="time" aria-label="days">{timeLeft.days}</span>
+  <span className="separator">:</span> {/* Add separator */}
+  <span className="time" aria-label="hours">{timeLeft.hours}</span>
+  <span className="separator">:</span> {/* Add separator */}
+  <span className="time" aria-label="minutes">{timeLeft.minutes}</span>
+  <span className="separator">:</span> {/* Add separator */}
+  <span className="time" aria-label="seconds">{timeLeft.seconds}</span>
+</div>
+
 
             <a href="#" className="btn btn-primary">Get Only $39.00</a>
           </div>

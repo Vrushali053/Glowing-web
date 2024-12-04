@@ -2,6 +2,7 @@ import React from "react";
 import { FaTwitter, FaYoutube } from "react-icons/fa";
 import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io5";
 import payImage from '../../assets/Images/pay 1.png';
+import Glowing from '../../assets/Images/logo.png'
 import "./Footer.css";
 
 function Footer() {
@@ -12,12 +13,12 @@ function Footer() {
         <div className="footer-column">
           <h3 className="footer-heading">Company</h3>
           <p className="footer-text">
-            Find a location nearest you. See{" "}
-            <a href="#" className="footer-link">
-              Our Stores
+            Find our location nearest you. See in the {" "}
+            <a href="#" className="footer-linkk">
+                     Our Stores
             </a>
           </p>
-          <p className="footer-text footer-bold">+391 (0)35 2568 4593</p>
+          <p className="footer-text footer-bold" >+391 (0)35 2568 4593</p>
           <p className="footer-text">hello@domain.com</p>
         </div>
 
@@ -46,7 +47,7 @@ function Footer() {
 
         {/* Newsletter Section */}
         <div className="footer-column">
-          <h3 className="footer-heading">Good emails.</h3>
+          <h3 className="footer-headingg">Good emails.</h3>
           <p className="footer-text">
             Enter your email below to be the first to know about new collections and product launches.
           </p>
@@ -87,7 +88,8 @@ function Footer() {
 
         {/* Middle Section: Glowing */}
         <div className="middle-section">
-          <a href="#top" className="footer-glowing">GLOWING</a> {/* Linking to top of page */}
+          {/* <a href="#top" className="footer-glowing">GLOWING</a>  */}
+          <img src={Glowing} alt="Glowing" className="glowing-image" />
         </div>
 
         {/* Right Section: Payment Methods Image */}

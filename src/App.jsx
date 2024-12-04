@@ -1,12 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from '../src/Components/Navbar/Navbar'
-import Footer from '../src/Components/Footer/Footer'
+
 import Homepage from './Components/Hompages/Homepage';
 import Collection from './Components/Sections/Collection/Collection';
 import Shop from './Components/Sections/Shop/Shop';
 import Offer from './Components/Sections/Offer/Offer';
 import Blog from './Components/Sections/Blog/Blog';
+import Footer from '../src/Components/Footer/Footer'
 
 
 function App() {

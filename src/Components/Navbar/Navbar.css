@@ -19,11 +19,19 @@ body {
   /* Alert Bar */
   .alert {
     background-color: #e6f1bc;
-    color: black;
+    
     
     font-weight: 600;
     padding: 10px 0;
     padding-left: 500px;
+    /* background-color: var(--pale-spring-bud); */
+    color: var(--black);
+    font-size: var(--fs-7);
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    letter-spacing: 2px;
+    text-align: center;
+    padding-block: 15px;
   }
   
   .alert .container {
@@ -57,32 +65,40 @@ body {
   }
   
   .input-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
   }
   
   .search-field {
-    padding: 8px;
+    padding: 12px 30px 12px 12px; /* Increased padding to make the input taller */
     font-size: 14px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
+    /* border-radius: 4px; */
+    border: 2px solid #d9d8d8;
+    width: 260px /* Ensure the search field takes up the remaining space */
+    
   }
   
   .search-submit {
-    background-color: white;
+    position: absolute;
+    right: 12px; /* Adjusted position to keep the icon in place */
+    background: none;
     border: none;
-    padding: 8px 12px;
     cursor: pointer;
-    border-radius: 4px;
+    font-size: 18px;
+    color: #333;
   }
+  
   
   .search-submit:hover {
     /* background-color: #45a049; */
   }
   
   .Glowing {
-    font-size: 2rem;
+    margin-right: 150px;
+    font-size: 2.2rem;
+    font-weight: 500;
+    /* font-weight: bold; */
     text-align: center;
   }
   

@@ -45,7 +45,7 @@ function Hero() {
               are designed for everyone.</p>
             </p>
             <p className="price">Starting at $7.99</p>
-            <a href="#" className="btn btn-primaryy">Shop Now</a>
+            <a href="#" className="btn btn-primary">Shop Now</a>
           </div>
         </div>
       </div>

@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import { FaSearch, FaUser, FaStar, FaShoppingBag } from 'react-icons/fa';
-
+import { IoPersonOutline } from "react-icons/io5";
+import { IoBagHandleOutline } from "react-icons/io5";
+import { HiOutlineStar } from "react-icons/hi2";
 function Navbar() {
   const [query, setQuery] = useState("");
 
@@ -32,7 +34,7 @@ function Navbar() {
           </button>
 
           {/* Search Bar */}
-          <div className="input-wrapper">
+          {/* <div className="input-wrapper">
             <input
               type="search"
               name="search"
@@ -44,7 +46,21 @@ function Navbar() {
             <button className="search-submit" aria-label="search" onClick={handleSearch}>
               <FaSearch />
             </button>
-          </div>
+          </div> */}
+          <div className="input-wrapper">
+  <input
+    type="search"
+    name="search"
+    placeholder="Search product"
+    className="search-field"
+    value={query}
+    onChange={handleSearchChange}
+  />
+  <button className="search-submit" aria-label="search" onClick={handleSearch}>
+    <FaSearch />
+  </button>
+</div>
+
 
           {/* Logo */}
           {/* <a href="#" className="logo">
@@ -56,17 +72,17 @@ function Navbar() {
           {/* Header Actions */}
           <div className="header-actions">
             <button className="header-action-btn" aria-label="user">
-              <FaUser />
+            <IoPersonOutline />
             </button>
 
             <button className="header-action-btn" aria-label="favourite item">
-              <FaStar />
+            <HiOutlineStar />
               {/* <span className="btn-badge">0</span> */}
             </button>
 
             <button className="header-action-btn" aria-label="cart item">
               <span className="btn-text" value="0">$0.00</span>
-              <FaShoppingBag />
+              <IoBagHandleOutline />
               {/* <span className="btn-badge">0</span> */}
             </button>
           </div>

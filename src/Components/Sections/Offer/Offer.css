@@ -1,12 +1,12 @@
-offer section */
 .section.offer {
+  margin-top: 30px;
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   animation: fadeIn 1.5s ease-in-out; /* Section fade-in animation */
 }
 
-/* Container styling */
 .offer-container {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +15,6 @@ offer section */
   flex-wrap: nowrap; /* Ensure the items stay in one line */
 }
 
-/* Styling for each image item */
 .image-container {
   display: flex; /* Use flex for horizontal alignment */
   gap: 20px; /* Space between images */
@@ -24,7 +23,6 @@ offer section */
   flex: 1; /* Ensure it takes up available space */
 }
 
-/* Styling for each image item */
 .image-item {
   position: relative; /* For positioning elements like captions or badges */
 }
@@ -36,7 +34,6 @@ offer section */
   transition: transform 0.3s ease; /* Smooth zoom effect */
 }
 
-/* Image-specific styles */
 .image-left .offer-image {
   object-fit: cover; /* Ensure the image covers the area without distortion */
   height: 300px; /* Fixed height for the left image */
@@ -49,21 +46,21 @@ offer section */
   animation: zoomIn 1.5s ease-in-out;
 }
 
-/* Hover effect for images */
 .image-item:hover .offer-image {
   transform: scale(1.1); /* Zoom effect on hover */
 }
 
-/* Styling for the content container */
+/* Updated offer-content class */
 .offer-content {
+  
   text-align: left;
   padding: 20px;
   animation: slideLeft 1.5s ease-in-out; /* Slide-in from left animation */
-  max-width: 600px; /* Restrict the width for readability */
+  max-width: 800px; /* Increased width */
   flex: 1; /* Ensure the content takes available space */
+  margin-left: 100px; /* Add left margin */
 }
 
-/* Subtitle styling */
 .offer-subtitle {
   font-size: 18px;
   margin-bottom: 10px;
@@ -87,7 +84,6 @@ offer section */
   animation: pulse 2s infinite; /* Pulsing animation for the badge */
 }
 
-/* Section title styling */
 .section-title {
   font-size: 28px;
   font-weight: bold;
@@ -96,7 +92,6 @@ offer section */
   animation: slideRight 1.5s ease-in-out; /* Slide-in from right animation */
 }
 
-/* Countdown timer styling */
 .countdown {
   display: flex;
   justify-content: space-between;
@@ -113,7 +108,6 @@ offer section */
   color: rgb(48, 111, 79);
 }
 
-/* Button styling */
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -137,104 +131,11 @@ offer section */
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: rgb(48, 111, 79);
 }
+.separator {
 
-/* Keyframes for Animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideRight {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInScale {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* Responsive Design for smaller screens */
-@media (max-width: 768px) {
-  .offer-container {
-    flex-direction: column; /* Stack the content vertically on smaller screens */
-  }
-
-  .image-container {
-    flex-direction: column; /* Stack the images vertically on smaller screens */
-  }
-
-  .image-left .offer-image,
-  .image-right .offer-image {
-    height: 250px; /* Adjust image height on mobile */
-  }
+  font-size: 2rem;
+  color: rgb(48, 111, 79); /* Set color for the dots */
+  margin: 0 5px; /* Add space around the separator */
 }

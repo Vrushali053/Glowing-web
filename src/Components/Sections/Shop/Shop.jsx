@@ -4,6 +4,7 @@ import './Shop.css'; // Ensure the styles for the shop section are correctly imp
 import { IoBagHandleOutline } from "react-icons/io5";
 import { IoIosStarOutline } from "react-icons/io";
 import { IoRepeat } from "react-icons/io5";
+import { MdOutlineStar } from "react-icons/md";
 
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -24,19 +25,13 @@ import product15 from '../../../assets/images/product-15.jpg';
 function Shop() {
   return (
     <section className="section shop" id="shop" aria-label="shop" data-section>
-         <div className="title-wrapper">
-          <h2 className="h2 section-title">Our Bestsellers</h2> <p className='box'>
-        Shop All Products <FaArrowRight />
-      </p>
+       <div className="title-wrapper">
+  <h2 className="h2 section-title">Our Bestsellers</h2>
+  <p className="box">
+    Shop All Products <FaArrowRight />
+  </p>
+</div>
 
-          <div className='containe'>
-      
-    </div>
-          <a href="#" className="btn-link">
-            {/* <span className="span">Shop All Products</span> */}
-            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-          </a>
-        </div>
       <div className="container">
        
 
@@ -107,13 +102,14 @@ function Shop() {
                 </h3>
                 <div className="card-rating">
                   <div className="rating-wrapper" aria-label="5 star rating">
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <p className="rating-text">5170 reviews</p>
                   </div>
-                  <p className="rating-text">5170 reviews</p>
+                 
                 </div>
               </div>
             </div>
@@ -145,13 +141,14 @@ function Shop() {
                 </h3>
                 <div className="card-rating">
                   <div className="rating-wrapper" aria-label="5 star rating">
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <p className="rating-text">5170 reviews</p>
                   </div>
-                  <p className="rating-text">5170 reviews</p>
+                 
                 </div>
               </div>
             </div>
@@ -221,13 +218,14 @@ function Shop() {
                 </h3>
                 <div className="card-rating">
                   <div className="rating-wrapper" aria-label="5 star rating">
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                  </div>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                
                   <p className="rating-text">5170 reviews</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -259,13 +257,14 @@ function Shop() {
                 </h3>
                 <div className="card-rating">
                   <div className="rating-wrapper" aria-label="5 star rating">
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                  </div>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                 
                   <p className="rating-text">5170 reviews</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -278,7 +277,7 @@ function Shop() {
 
 
        <div className="title-wrapper">
-          <h2 className="h2 section-title">Under $25</h2>
+          <h2 className="h2 section-title">Under$25</h2>
           {/* <p className='text'>
       Shop All Products <i className='fa fa-arrow-right'></i>
     </p> */}
@@ -362,13 +361,14 @@ function Shop() {
                 </h3>
                 <div className="card-rating">
                   <div className="rating-wrapper" aria-label="5 star rating">
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                  </div>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                  
                   <p className="rating-text">5170 reviews</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -400,13 +400,14 @@ function Shop() {
                 </h3>
                 <div className="card-rating">
                   <div className="rating-wrapper" aria-label="5 star rating">
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                  </div>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                
                   <p className="rating-text">5170 reviews</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -439,13 +440,14 @@ function Shop() {
                 </h3>
                 <div className="card-rating">
                   <div className="rating-wrapper" aria-label="5 star rating">
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                  </div>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                 
                   <p className="rating-text">5170 reviews</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -477,13 +479,14 @@ function Shop() {
                 </h3>
                 <div className="card-rating">
                   <div className="rating-wrapper" aria-label="5 star rating">
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                  </div>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+               
                   <p className="rating-text">5170 reviews</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -515,13 +518,14 @@ function Shop() {
                 </h3>
                 <div className="card-rating">
                   <div className="rating-wrapper" aria-label="5 star rating">
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                    <ion-icon name="star" aria-hidden="true"></ion-icon>
-                  </div>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                    <ion-icon name="star" aria-hidden="true"><MdOutlineStar /></ion-icon>
+                
                   <p className="rating-text">5170 reviews</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -547,65 +551,57 @@ function Shop() {
 
        {/* Feature Section */}
        <section className="section feature" aria-label="feature" data-section>
-        <h2 className="h2-large section-title">Why Shop with Glowing?</h2>
-        <div className="containere">
-          <ul className="flex-list">
-            {/* Feature Card 1 */}
-            <li className="flex-item">
-              <div className="feature-card">
-                <img
-                  src='.\src\assets\Images\feature-1.jpg'
-                  width="204"
-                  height="236"
-                  loading="lazy"
-                  alt="Guaranteed PURE"
-                  className="card-icon"
-                />
-                <h3 className="h3 card-title">Guaranteed PURE</h3>
-                <p className="card-text">
-                  All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients.
-                </p>
-              </div>
-            </li>
-
-            {/* Feature Card 2 */}
-            <li className="flex-item">
-              <div className="feature-card">
-                <img
-                    src='.\src\assets\Images\feature-2.jpg'
-                  width="204"
-                  height="236"
-                  loading="lazy"
-                  alt="Completely Cruelty-Free"
-                  className="card-icon"
-                />
-                <h3 className="h3 card-title">Completely Cruelty-Free</h3>
-                <p className="card-text">
-                  All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients.
-                </p>
-              </div>
-            </li>
-
-            {/* Feature Card 3 */}
-            <li className="flex-item">
-              <div className="feature-card">
-                <img
-                    src='.\src\assets\Images\feature-3.jpg'
-                  width="204"
-                  height="236"
-                  loading="lazy"
-                  alt="Ingredient Sourcing"
-                  className="card-icon"
-                />
-                <h3 className="h3 card-title">Ingredient Sourcing</h3>
-                <p className="card-text">
-                  All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients.
-                </p>
-              </div>
-            </li>
-          </ul>
+  <h2 className="h2-large section-title">Why Shop with Glowing?</h2>
+  <div className="containere">
+    <ul className="flex-list">
+      {/* Feature Card 1 */}
+      <li className="flex-item">
+        <div className="feature-card">
+          <img
+            src='.\src\assets\Images\feature-1.jpg'
+            alt="Guaranteed PURE"
+            className="card-icon"
+          />
+          <h3 className="h3 card-title">Guaranteed PURE</h3>
+          <p className="card-text">
+            All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients.
+          </p>
         </div>
-      </section>
+      </li>
+
+      {/* Feature Card 2 */}
+      <li className="flex-item">
+        <div className="feature-card">
+          <img
+            src='.\src\assets\Images\feature-2.jpg'
+            alt="Completely Cruelty-Free"
+            className="card-icon"
+          />
+          <h3 className="h3 card-title">Completely Cruelty-Free</h3>
+          <p className="card-text">
+            All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients.
+          </p>
+        </div>
+      </li>
+
+      {/* Feature Card 3 */}
+      <li className="flex-item">
+        <div className="feature-card">
+          <img
+            src='.\src\assets\Images\feature-3.jpg'
+            alt="Ingredient Sourcing"
+            className="card-icon"
+          />
+          <h3 className="h3 card-title">Ingredient Sourcing</h3>
+          <p className="card-text">
+            All Grace formulations adhere to strict purity standards and will never contain harsh or toxic ingredients.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
     </section>
     
   );

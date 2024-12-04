@@ -1,17 +1,55 @@
 
 *{
     box-sizing: border-box;
+    
    
 }
 .containe {
+  
+ 
     width: 100%;  /* Make sure the container takes full width */
     text-align: right;  /* Align the content to the right */
   }
 
+  /* Title Wrapper */
+.title-wrapper {
+  margin-left: 10px;
+  display: flex; /* Align items in a row */
+  justify-content: space-between; /* Push content to the edges */
+  align-items: center; /* Vertically center the items */
+  margin-bottom: 20px; /* Add spacing below the title */
+}
+
+/* Section Title */
+.h2.section-title {
   
+  margin: 0; /* Remove default margin */
+  font-size: 1.8rem; /* Adjust size as needed */
+  font-weight: 600;
+  color: #333;
+}
+
+/* Shop Link */
+.shop-link {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Add space between text and arrow */
+  font-size: 1rem;
+  font-weight: 500;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.shop-link:hover {
+  color: #0056b3; /* Change color on hover */
+}
+
   
   .box {
-    /* margin-right: 50px; */
+    
+    margin-right: 140px;
     display: inline-flex;
     align-items: center;
     background-color: rgb(86, 83, 83);
@@ -25,7 +63,8 @@
   }
   
   .box:hover {
-    background-color: #0056b3;
+  
+    background-color: rgb(48, 111, 79);
   }
   
   .box svg {
@@ -35,11 +74,14 @@
 
 /* Shop Section */
 .section.shop {
+  
+  margin-top: 30px;
     padding: 40px 0;
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
 }
 
 .shop .container {
+  
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 15px;
@@ -49,6 +91,8 @@
 
 /* Slider Container */
 .has-scrollbar {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
     display: flex;
     gap: 15px;
     padding-block-end: 15px;
@@ -64,6 +108,8 @@
 
 /* Parent container with horizontal scroll, without visible scrollbar */
 .has-scrollbarr {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
     display: flex;
     overflow-x: auto; /* Enable scrolling */
     scrollbar-width: none; /* For Firefox: Hide the scrollbar */
@@ -89,7 +135,7 @@
   
   .scrollbar-itemr:hover {
     transform: translateY(-5px); /* Hover effect for lift */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Optional shadow */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  */
   }
   
   /* Responsive behavior for smaller screens */
@@ -103,7 +149,7 @@
 .shop-card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -111,6 +157,7 @@
 }
 
 .card-banner {
+  
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -147,11 +194,14 @@
 }
 
 .action-btn {
+  font-size: 1.2rem;
     border: none;
-    padding: 8px; /* Reduced padding */
+    padding: 15px; /* Reduced padding */
     border-radius: 50%;
-    background-color: #040404;
-    color: white;
+    /* background-color: #040404;
+    color: white; */
+    color: black;
+    background-color: white;
     cursor: pointer;
     transition: background 0.3s ease;
 }
@@ -161,24 +211,39 @@
 }
 
 .card-content {
+  
     /* padding: 15px;  */
 }
 
 .price .span {
+  margin-left: 150px;
     font-weight: bold;
     color: black;
 }
 
 .card-title {
-    font-size: 12px;
-    font-weight: bold;
+  margin-left: 20px;
+  font-size: 0.5rem;
+    /* font-weight: bold; */
     color: #333;
     text-decoration: none;
     display: block;
     margin-bottom: 8px; /* Decreased margin */
 }
-
+.card-title:hover{
+  color:rgb(48, 111, 79) ;
+  text-decoration: underline
+}
+.rating-text{
+  margin-left: 20px;
+}
+.rating-wrapper{
+  margin-left: 100px;
+  color:  rgb(48, 111, 79);
+  display: flex;
+}
 .card-rating .rating-wrapper ion-icon {
+  
     font-size: 14px; /* Decreased icon size */
 }
 
@@ -191,7 +256,9 @@
         transform: translateX(-100%); /* Move to the leftmost end */
     }
 }
-
+.star{
+  color: black;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .has-scrollbar {
@@ -253,7 +320,7 @@
     border-radius: 8px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
     margin-bottom: 20px; /* Add space between rows */
   }
   
@@ -262,17 +329,20 @@
     /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  */
   }
   
-  /* Feature Card Image */
-  .card-icon {
-    width: 100%;
-    height: auto; /* Maintain the aspect ratio */
-    max-width: 204px; /* Set a maximum width to prevent large images */
-    /* margin-bottom: 20px;  */
-  }
+  
+ /* Adjust the size of images in feature cards */
+.card-icon {
+  width: 110px; /* Reduce the width */
+  height: 125px; /* Reduce the height */
+  object-fit: cover; /* Ensure images retain their aspect ratio */
+  margin-bottom: 50px;
+}
+
   
   /* Card Title Styling */
   .card-title {
-    font-size: 22px;
+    margin-left: 20px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #333;
