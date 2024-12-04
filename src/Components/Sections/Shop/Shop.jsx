@@ -9,13 +9,13 @@ import { MdOutlineStar } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa6";
 
 // Import product images for the shop cards
-import product1 from '../../../assets/images/product-01.jpg';
+// import product1 from '../../../assets/images/product-01.jpg';
 import product2 from '../../../assets/images/product-02.jpg';
 import product3 from '../../../assets/images/product-03.jpg';
-import product4 from '../../../assets/images/product-04.jpg';
+// import product4 from '../../../assets/images/product-04.jpg';
 import product5 from '../../../assets/images/product-05.jpg';
 import product6 from '../../../assets/images/product-06.jpg';
-import product7 from '../../../assets/images/product-07.jpg';
+// import product7 from '../../../assets/images/product-07.jpg';
 import product8 from '../../../assets/images/product-08.jpg';
 import product9 from '../../../assets/images/product-09.jpg';
 import product10 from '../../../assets/images/product-10.jpg';
