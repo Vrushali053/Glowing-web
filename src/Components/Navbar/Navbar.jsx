@@ -1,10 +1,10 @@
-
 import React, { useState } from 'react';
 import './Navbar.css';
-import { FaSearch, FaUser, FaStar, FaShoppingBag } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import { IoPersonOutline } from "react-icons/io5";
 import { IoBagHandleOutline } from "react-icons/io5";
-import { HiOutlineStar } from "react-icons/hi2";
+import { HiOutlineStar } from "react-icons/hi2"; 
+
 function Navbar() {
   const [query, setQuery] = useState("");
 
@@ -34,7 +34,7 @@ function Navbar() {
           </button>
 
           {/* Search Bar */}
-          {/* <div className="input-wrapper">
+          <div className="input-wrapper">
             <input
               type="search"
               name="search"
@@ -46,60 +46,44 @@ function Navbar() {
             <button className="search-submit" aria-label="search" onClick={handleSearch}>
               <FaSearch />
             </button>
-          </div> */}
-          <div className="input-wrapper">
-  <input
-    type="search"
-    name="search"
-    placeholder="Search product"
-    className="search-field"
-    value={query}
-    onChange={handleSearchChange}
-  />
-  <button className="search-submit" aria-label="search" onClick={handleSearch}>
-    <FaSearch />
-  </button>
-</div>
-
+          </div>
 
           {/* Logo */}
-          {/* <a href="#" className="logo">
-            <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing" />
-          </a> */}
-           <div className='Glowing'>
-            GLOWING
-           </div>
+          <div className='Glowing'>GLOWING</div>
+
           {/* Header Actions */}
           <div className="header-actions">
+            {/* User Icon */}
             <button className="header-action-btn" aria-label="user">
-            <IoPersonOutline />
+              <IoPersonOutline />
             </button>
 
+            {/* Favorite Icon */}
             <button className="header-action-btn" aria-label="favourite item">
-            <HiOutlineStar />
-              {/* <span className="btn-badge">0</span> */}
+              <HiOutlineStar />
+              <span className="btn-badge">0</span>  {/* Badge showing count */}
             </button>
 
+            {/* Cart Icon */}
             <button className="header-action-btn" aria-label="cart item">
               <span className="btn-text" value="0">$0.00</span>
               <IoBagHandleOutline />
-              {/* <span className="btn-badge">0</span> */}
+              <span className="btn-badge">0</span>  {/* Badge showing item count */}
             </button>
           </div>
-          </div>
-          </div>
-          {/* Navigation Bar */}
-          <nav className="navbar">
-            <ul className="navbar-list">
-              <li><a href="/Homepage" className="navbar-link has-after">Home</a></li>
-              <li><a href="/collection" className="navbar-link has-after">Collection</a></li>
-              <li><a href="/shop" className="navbar-link has-after">Shop</a></li>
-              <li><a href="/offer" className="navbar-link has-after">Offer</a></li>
-              <li><a href="/blog" className="navbar-link has-after">Blog</a></li>
-            </ul>
-          </nav>
-       
-     
+        </div>
+      </div>
+
+      {/* Navigation Bar */}
+      <nav className="navbar">
+        <ul className="navbar-list">
+          <li><a href="/Homepage" className="navbar-link has-after">Home</a></li>
+          <li><a href="/collection" className="navbar-link has-after">Collection</a></li>
+          <li><a href="/shop" className="navbar-link has-after">Shop</a></li>
+          <li><a href="/offer" className="navbar-link has-after">Offer</a></li>
+          <li><a href="/blog" className="navbar-link has-after">Blog</a></li>
+        </ul>
+      </nav>
     </header>
   );
 }
