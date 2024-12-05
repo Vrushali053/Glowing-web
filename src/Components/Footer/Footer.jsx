@@ -69,7 +69,7 @@ function Footer() {
       <div className="b-icon">
         {/* Left Section: Copyright & Social Media Icons */}
         <div className="left-section">
-          <p>&copy; 2022 CodeWithSadee</p>
+          <p>&copy; 2024 Devcons</p>
           <div className="social-icons">
             <a href="#" className="social-icon">
               <FaTwitter />

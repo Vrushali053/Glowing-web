@@ -1,30 +1,25 @@
-
-*{
-    box-sizing: border-box;
-    
-   
+* {
+  box-sizing: border-box;
 }
-.containe {
-  
- 
-    width: 100%;  /* Make sure the container takes full width */
-    text-align: right;  /* Align the content to the right */
-  }
 
-  /* Title Wrapper */
+.containe {
+  width: 100%;
+  text-align: right;
+}
+
+/* Title Wrapper */
 .title-wrapper {
   margin-left: 10px;
-  display: flex; /* Align items in a row */
-  justify-content: space-between; /* Push content to the edges */
-  align-items: center; /* Vertically center the items */
-  margin-bottom: 20px; /* Add spacing below the title */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 /* Section Title */
 .h2.section-title {
-  
-  margin: 0; /* Remove default margin */
-  font-size: 1.8rem; /* Adjust size as needed */
+  margin: 0;
+  font-size: 1.8rem;
   font-weight: 600;
   color: #333;
 }
@@ -33,7 +28,7 @@
 .shop-link {
   display: flex;
   align-items: center;
-  gap: 5px; /* Add space between text and arrow */
+  gap: 5px;
   font-size: 1rem;
   font-weight: 500;
   color: #007bff;
@@ -43,348 +38,325 @@
 }
 
 .shop-link:hover {
-  color: #0056b3; /* Change color on hover */
+  color: #0056b3;
 }
 
-  
-  .box {
-    
-    margin-right: 140px;
-    display: inline-flex;
-    align-items: center;
-    background-color: rgb(86, 83, 83);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .box:hover {
-  
-    background-color: rgb(48, 111, 79);
-  }
-  
-  .box svg {
-    margin-left: 10px;
-  }
-  
+.box {
+  margin-right: 140px;
+  display: inline-flex;
+  align-items: center;
+  background-color: rgb(86, 83, 83);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.box:hover {
+  background-color: rgb(48, 111, 79);
+}
+
+.box svg {
+  margin-left: 10px;
+}
 
 /* Shop Section */
 .section.shop {
-  
   margin-top: 30px;
-    padding: 40px 0;
-    /* background-color: #f9f9f9; */
+  padding: 40px 0;
 }
 
 .shop .container {
-  
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 15px;
-    display: flex;
-    overflow: hidden; /* Hide overflow to prevent scrollbars */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  overflow: hidden;
 }
 
 /* Slider Container */
 .has-scrollbar {
-  list-style-type: none; /* Removes bullet points */
+  list-style-type: none;
   padding: 0;
-    display: flex;
-    gap: 15px;
-    padding-block-end: 15px;
-    margin-block-end: -15px;
-    animation: autoScroll 10s linear infinite; /* Automatic scrolling */
+  display: flex;
+  gap: 15px;
+  padding-block-end: 15px;
+  margin-block-end: -15px;
+  animation: autoScroll 10s linear infinite;
 }
 
 /* Scrollbar Item */
 .scrollbar-item {
-    min-width: 400px;
-    transition: transform 0.5s ease-in-out; /* Smooth transition for individual items */
+  min-width: 400px;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* Parent container with horizontal scroll, without visible scrollbar */
 .has-scrollbarr {
-  list-style-type: none; /* Removes bullet points */
+  list-style-type: none;
   padding: 0;
-    display: flex;
-    overflow-x: auto; /* Enable scrolling */
-    scrollbar-width: none; /* For Firefox: Hide the scrollbar */
-    -ms-overflow-style: none;  /* For Internet Explorer 10+ */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    gap: 16px; /* Adds spacing between items */
-    padding: 10px; /* Optional padding */
-    width: 100%;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.has-scrollbarr::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-itemr {
+  flex: 0 0 auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 300px; /* Fixed width for items */
+  height: 350px; /* Set a fixed height */
+}
+
+.scrollbar-itemr:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .has-scrollbar {
+      flex-wrap: wrap;
+      justify-content: center;
   }
-  
-  /* For webkit browsers like Chrome, Edge, Safari */
-  .has-scrollbarr::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
+
+  .scrollbar-item {
+      min-width: 100%;
   }
-  
-  /* Individual scrollable item styling */
+
+  .section-title {
+      font-size: 24px;
+  }
+
+  .btn-link {
+      font-size: 12px;
+  }
+
+  /* Reducing the size of the shop product boxes */
   .scrollbar-itemr {
-    flex: 0 0 auto; /* Prevent items from shrinking or growing */
-    cursor: pointer; /* Makes the items clickable */
-    transition: transform 0.3s ease; /* Adds a hover effect */
-    width: 300px; /* Fixed width for items */
+      width: 250px; /* Adjust width for smaller screens */
+      height: 300px; /* Reduce height for smaller screens */
   }
-  
-  .scrollbar-itemr:hover {
-    transform: translateY(-5px); /* Hover effect for lift */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);  */
+}
+
+@media (max-width: 480px) {
+  .scrollbar-itemr {
+      width: 220px; /* Further reduce width for very small screens */
+      height: 270px; /* Further reduce height for very small screens */
   }
-  
-  /* Responsive behavior for smaller screens */
-  @media (max-width: 768px) {
-    .scrollbar-itemr {
-      width: 250px; /* Adjust item width for smaller screens */
-    }
-  }
-  
+}
+
 /* Shop Card */
 .shop-card {
-    background-color: #fff;
-    border-radius: 10px;
-    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .card-banner {
-  
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    display: block;
-    
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: block;
 }
 
 .img-cover {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .card-banner:hover .img-cover {
-    opacity: 0.7; /* Fade image on hover */
+  opacity: 0.7;
 }
 
 /* Position action icons vertically on the right */
 .card-actions {
-    position: absolute;
-    top: 50%;
-    right: 15px; /* Place on the right side */
-    transform: translateY(-50%); /* Center vertically */
-    display: flex;
-    flex-direction: column; /* Stack icons vertically */
-    gap: 10px; /* Space between icons */
-    opacity: 0; /* Hide icons by default */
-    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .card-banner:hover .card-actions {
-    opacity: 1; /* Show icons on hover */
+  opacity: 1;
 }
 
 .action-btn {
   font-size: 1.2rem;
-    border: none;
-    padding: 15px; /* Reduced padding */
-    border-radius: 50%;
-    /* background-color: #040404;
-    color: white; */
-    color: black;
-    background-color: white;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .action-btn:hover {
-    background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .card-content {
-  
-    /* padding: 15px;  */
 }
 
 .price .span {
   margin-left: 150px;
-    font-weight: bold;
-    color: black;
+  font-weight: bold;
+  color: black;
 }
 
 .card-title {
   margin-left: 20px;
   font-size: 0.5rem;
-    /* font-weight: bold; */
-    color: #333;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 8px; /* Decreased margin */
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
 }
-.card-title:hover{
-  color:rgb(48, 111, 79) ;
-  text-decoration: underline
+
+.card-title:hover {
+  color: rgb(48, 111, 79);
+  text-decoration: underline;
 }
-.rating-text{
+
+.rating-text {
   margin-left: 20px;
 }
-.rating-wrapper{
+
+.rating-wrapper {
   margin-left: 100px;
-  color:  rgb(48, 111, 79);
+  color: rgb(48, 111, 79);
   display: flex;
 }
+
 .card-rating .rating-wrapper ion-icon {
-  
-    font-size: 14px; /* Decreased icon size */
+  font-size: 14px;
 }
 
-/* Scroll Animation */
 @keyframes autoScroll {
-    0% {
-        transform: translateX(0); /* Start at the leftmost position */
-    }
-    100% {
-        transform: translateX(-100%); /* Move to the leftmost end */
-    }
+  0% {
+      transform: translateX(0);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
 }
-.star{
+
+.star {
   color: black;
 }
-/* Responsive Design */
-@media (max-width: 768px) {
-    .has-scrollbar {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
-    .scrollbar-item {
-        min-width: 100%;
-    }
-
-    .section-title {
-        font-size: 24px; /* Decreased font size */
-    }
-
-    .btn-link {
-        font-size: 12px; /* Decreased font size */
-    }
-}
 /* Feature Section Styles */
 .section.feature {
-    padding: 60px 20px;
-    background-color: white; /* Set background to white */
-    text-align: center;
-  }
-  
-  .section-title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    color: #333;
-  }
-  
-  /* Container to center content */
-  .containere {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Feature List (Flex Container) */
-  .flex-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Ensure the items wrap on smaller screens */
-    gap: 20px; /* Adds spacing between the items */
-    padding: 0;
-    list-style: none;
-    margin: 0;
-  }
-  
-  /* Individual Feature Item (Flex Items) */
-  .flex-item {
-    flex: 1 1 calc(33.333% - 20px); /* Each item takes up 1/3 of the container */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #fff; /* Ensure each card has a white background */
-    border-radius: 8px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    padding: 20px;
-    /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-    margin-bottom: 20px; /* Add space between rows */
-  }
-  
-  .flex-item:hover {
-    /* transform: translateY(-5px);  */
-    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  */
-  }
-  
-  
- /* Adjust the size of images in feature cards */
+  padding: 60px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.containere {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.flex-item {
+  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 .card-icon {
-  width: 110px; /* Reduce the width */
-  height: 125px; /* Reduce the height */
-  object-fit: cover; /* Ensure images retain their aspect ratio */
+  width: 110px;
+  height: 125px;
+  object-fit: cover;
   margin-bottom: 50px;
 }
 
-  
-  /* Card Title Styling */
-  .card-title {
-    margin-left: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
+.card-title {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .flex-item {
+      flex: 1 1 100%;
   }
-  
-  /* Card Text Styling */
-  .card-text {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.5;
-  }
-  
-  /* Responsive Design for Smaller Screens */
-  @media (max-width: 768px) {
-    .flex-item {
-      flex: 1 1 100%; /* Stack the feature cards vertically */
-    }
-  
-    .section-title {
+
+  .section-title {
       font-size: 24px;
-    }
-  
-    .card-title {
+  }
+
+  .card-title {
       font-size: 20px;
-    }
-  
-    .card-text {
+  }
+
+  .card-text {
       font-size: 14px;
-    }
   }
-  
-  @media (max-width: 480px) {
-    .section-title {
+}
+
+@media (max-width: 480px) {
+  .section-title {
       font-size: 20px;
-    }
-  
-    .card-title {
-      font-size: 18px;
-    }
-  
-    .card-text {
-      font-size: 12px;
-    }
   }
-  
+
+  .card-title {
+      font-size: 18px;
+  }
+
+  .card-text {
+      font-size: 12px;
+  }
+}

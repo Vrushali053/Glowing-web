@@ -1,71 +1,63 @@
+/* Offer Section */
 .section.offer {
   margin-top: 30px;
   padding: 40px 20px;
-  /* background-color: #f9f9f9; */
-  animation: fadeIn 1.5s ease-in-out; /* Section fade-in animation */
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .offer-container {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px; /* Adjust spacing between the sections */
-  animation: slideUp 1.2s ease-in-out; /* Slide-up animation for the container */
-  flex-wrap: nowrap; /* Ensure the items stay in one line */
+  gap: 20px;
+  animation: slideUp 1.2s ease-in-out;
+  flex-wrap: nowrap; /* Ensures the items stay in one line */
 }
 
 .image-container {
-  display: flex; /* Use flex for horizontal alignment */
+  display: flex; /* Use flex to display images side by side */
   gap: 20px; /* Space between images */
   align-items: center; /* Center images vertically if necessary */
   padding: 20px;
-  flex: 1; /* Ensure it takes up available space */
+  flex: 1;
 }
 
 .image-item {
-  position: relative; /* For positioning elements like captions or badges */
+  position: relative;
 }
 
 .offer-image {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  transition: transform 0.3s ease; /* Smooth zoom effect */
+  transition: transform 0.3s ease;
 }
 
 .image-left .offer-image {
-  object-fit: cover; /* Ensure the image covers the area without distortion */
-  height: 300px; /* Fixed height for the left image */
-  animation: zoomIn 1.5s ease-in-out;
+  object-fit: cover;
+  height: 300px;
 }
 
 .image-right .offer-image {
   object-fit: cover;
-  height: 500px; /* Fixed height for the right image */
-  animation: zoomIn 1.5s ease-in-out;
+  height: 500px;
 }
 
-.image-item:hover .offer-image {
-  transform: scale(1.1); /* Zoom effect on hover */
-}
-
-/* Updated offer-content class */
+/* Offer Content */
 .offer-content {
-  
   text-align: left;
   padding: 20px;
-  animation: slideLeft 1.5s ease-in-out; /* Slide-in from left animation */
-  max-width: 800px; /* Increased width */
-  flex: 1; /* Ensure the content takes available space */
-  margin-left: 100px; /* Add left margin */
+  animation: slideLeft 1.5s ease-in-out;
+  max-width: 800px;
+  flex: 1;
+  margin-left: 100px;
 }
 
 .offer-subtitle {
   font-size: 18px;
   margin-bottom: 10px;
   color: #555;
-  animation: fadeIn 1.2s ease-in-out; /* Fade-in animation */
+  animation: fadeIn 1.2s ease-in-out;
 }
 
 .offer-subtitle .span {
@@ -81,7 +73,7 @@
   border-radius: 12px;
   font-size: 14px;
   margin-left: 10px;
-  animation: pulse 2s infinite; /* Pulsing animation for the badge */
+  animation: pulse 2s infinite;
 }
 
 .section-title {
@@ -89,7 +81,7 @@
   font-weight: bold;
   margin: 20px 0;
   color: #333;
-  animation: slideRight 1.5s ease-in-out; /* Slide-in from right animation */
+  animation: slideRight 1.5s ease-in-out;
 }
 
 .countdown {
@@ -97,7 +89,7 @@
   justify-content: space-between;
   max-width: 300px;
   margin: 20px 0;
-  animation: fadeInScale 1.2s ease-in-out; /* Fade-in with scaling effect */
+  animation: fadeInScale 1.2s ease-in-out;
 }
 
 .countdown .time {
@@ -111,20 +103,20 @@
 .btn {
   display: inline-block;
   text-decoration: none;
-  font-size: 14px; /* Reduced font size */
+  font-size: 14px;
   font-weight: bold;
-  padding: 8px 16px; /* Reduced padding */
+  padding: 8px 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Smooth transition for background color */
+  transition: background-color 0.3s;
 }
 
 .btn-primary {
   background-color: black;
   color: #fff;
   border-radius: 10px;
-  width: 150px; /* Set a fixed width */
-  height: 40px; /* Adjust height for better proportion */
+  width: 150px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,9 +125,51 @@
 .btn-primary:hover {
   background-color: rgb(48, 111, 79);
 }
-.separator {
 
+.separator {
   font-size: 2rem;
-  color: rgb(48, 111, 79); /* Set color for the dots */
-  margin: 0 5px; /* Add space around the separator */
+  color: rgb(48, 111, 79);
+  margin: 0 5px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjust container and content layout */
+  .offer-container {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content */
+  }
+
+  /* Keep the images side by side on mobile */
+  .image-container {
+    flex-direction: row; /* Keep images in a row */
+    gap: 10px; /* Space between images */
+  }
+
+  /* Adjust image sizes for mobile */
+  .image-left .offer-image {
+    height: 200px; /* Reduce height for mobile */
+  }
+
+  .image-right .offer-image {
+    height: 300px; /* Reduce height for mobile */
+  }
+
+  /* Adjust offer content */
+  .offer-content {
+    margin-left: 0; /* Remove left margin */
+    max-width: 100%; /* Make the content full width */
+    text-align: center; /* Center the text */
+  }
+
+  /* Countdown font size */
+  .countdown .time {
+    font-size: 1.2rem; /* Smaller font size for countdown */
+  }
+
+  /* Button width */
+  .btn-primary {
+    width: 100%; /* Make the button full width */
+    height: 45px; /* Adjust height for mobile */
+  }
 }

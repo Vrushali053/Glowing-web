@@ -38,7 +38,7 @@
 
 /* Card Styling */
 .collection-card {
-  flex: 1 1 calc(33.333% - 20px);
+  flex: 1 1 calc(33.333% - 20px); /* Three cards in a row on desktop */
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -47,7 +47,7 @@
 /* Image Styling */
 .collection-image {
   width: 100%;
-  padding-top: 70%; /* Aspect Ratio */
+  padding-top: 70%; /* Aspect Ratio for desktop */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -55,7 +55,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   padding: 20px;
-  height: 400px;
+  height: 400px; /* Height for desktop */
   overflow: hidden;
   transition: all 0.3s ease; /* Smooth transition */
 }
@@ -99,6 +99,9 @@
 .collection-text {
   color: #000;
   z-index: 2;
+  position: absolute; /* Make the text position absolute */
+  top: 20px; /* Position text at the top of the image */
+  left: 20px; /* Keep it left-aligned */
 }
 
 .collection-title {
@@ -128,8 +131,40 @@
 }
 
 /* Responsive Design */
+/* For mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
   .collection-card {
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* Stack the cards vertically on mobile */
+  }
+
+  /* Adjust image height for mobile */
+  .collection-image {
+    height: 250px; /* Reduce height for mobile */
+    padding-top: 56.25%; /* Adjust aspect ratio to 16:9 */
+  }
+
+  /* Move text to the top for mobile as well */
+  .collection-text {
+    top: 10px; /* Adjust text to the top */
+    left: 10px; /* Keep left-aligned */
+  }
+}
+
+/* For larger desktop screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .collection-card {
+    flex: 1 1 calc(33.333% - 20px); /* Keep three cards in a row */
+  }
+
+  /* Ensure proper height for desktop */
+  .collection-image {
+    height: 400px; /* Maintain the height on larger screens */
+    padding-top: 70%; /* Maintain aspect ratio for desktop */
+  }
+
+  /* Move text to the top for larger screens */
+  .collection-text {
+    top: 20px; /* Adjust text to the top */
+    left: 20px; /* Keep left-aligned */
   }
 }

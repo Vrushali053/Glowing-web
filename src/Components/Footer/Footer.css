@@ -33,7 +33,6 @@
 }
 
 .footer-text {
-  
   font-size: 15px; /* Slightly reduced font size for text */
   line-height: 2; /* Increased line height for more space between lines */
   margin-bottom: 20px; /* Increased space below each text */
@@ -42,12 +41,13 @@
 .footer-text.footer-bold {
   font-weight: bold;
 }
+
 .footer-linkk {
   color: black;
-  
   font-size: 15px; /* Slightly reduced font size for links */
   transition: color 0.3s ease;
 }
+
 .footer-link {
   color: #555;
   text-decoration: none;
@@ -75,7 +75,6 @@
 }
 
 .email-field {
-  
   flex: 1;
   padding: 10px;
   border: 1px solid #ddd;
@@ -155,15 +154,13 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-container {
-    
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column for smaller screens */
   }
 
   .b-icon {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-    
   }
 
   .left-section {
@@ -174,6 +171,21 @@
 
 .glowing-image {
   margin-right: 60px;
-  width: 200px;
-  height: 25px;
+  width: 150px; /* Reduced width */
+  height: 20px; /* Reduced height */
 }
+
+@media (max-width: 768px) {
+  .glowing-image {
+    width: 120px; /* Further reduced width on smaller screens */
+    height: 18px; /* Further reduced height on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .glowing-image {
+    width: 100px; /* Even further reduced width on very small screens */
+    height: 15px; /* Even further reduced height on very small screens */
+  }
+}
+
