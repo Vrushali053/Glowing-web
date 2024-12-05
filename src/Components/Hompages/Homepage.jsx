@@ -5,6 +5,7 @@ import Shop from '../Sections/Shop/Shop'
 import Offer from '../Sections/Offer/Offer'
 import Blog from '../Sections/Blog/Blog'
 import Collection from '../Sections/Collection/Collection'
+import Scrollbar from './Scrollbar'
 
 function Homepage() {
   return (
@@ -14,6 +15,7 @@ function Homepage() {
     <Shop />
     <Offer />
     <Blog />
+    <Scrollbar />
     </>
   )
 }

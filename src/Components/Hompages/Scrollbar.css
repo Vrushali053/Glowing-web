@@ -1,0 +1,25 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: rgb(48, 111, 79);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .scroll-to-top.visible {
+    display: block; /* Show the button when it's visible */
+    opacity: 1;
+  }
+  
+  .scroll-to-top:hover {
+    opacity: 1; /* Make the button fully opaque on hover */
+  }
+  
